@@ -1,0 +1,16 @@
+claude --dangerously-skip-permissions
+
+要求：
+【设计参考最佳实践】：[https://developer.huawei.com/consumer/cn/doc/design-guides/practices-overview-0000001746498066]
+【遵守应用UX体验标准】:[https://developer.huawei.com/consumer/cn/doc/design-guides/ux-guidelines-general-0000001760708152]
+
+编译：
+1.首先Ohpm install:
+    "\"D:\software\Dev-eco\DevEco Studio\tools\ohpm\bin\ohpm.bat\"" install --all --registry https://ohpm.openharmony.cn/ohpm/ --strict_ssl true
+2.执行编译命令编译命令参考：
+    "D:\software\Dev-eco\DevEco Studio\tools\node\node.exe" "D:\software\Dev-eco\DevEco Studio\tools\hvigor\bin\hvigorw.js" --sync -p product=default --analyze=normal --parallel --incremental --daemon
+
+模拟器连接和运行命令：
+"D:\software\Dev-eco\DevEco Studio\tools\node\node.exe" "D:\software\Dev-eco\DevEco Studio\tools\hvigor\bin\hvigorw.js" --mode module -p module=entry@default -p product=default -p requiredDeviceType=phone assembleHap --analyze=normal --parallel --incremental --daemon	
+
+

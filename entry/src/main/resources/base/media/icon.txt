@@ -1,0 +1,12 @@
+# 图标资源说明
+# 所有图标使用 SVG 或 PNG 格式
+# 尺寸遵循 UX 标准: 界面图标 ≥12vp (推荐), ≥8vp (必须)
+
+## 所需图标
+- ic_send.svg (发送图标) - 24×24 vp
+- ic_back.svg (返回图标) - 24×24 vp
+- ic_failed.svg (失败图标) - 16×16 vp
+- ic_assistant.svg (助手头像) - 32×32 vp
+- ic_copy.svg (复制图标) - 24×24 vp
+- ic_clear.svg (清空图标) - 24×24 vp
+- ic_settings.svg (设置图标) - 24×24 vp
