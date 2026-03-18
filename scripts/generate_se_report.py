@@ -76,7 +76,7 @@ def create_report():
     doc.add_heading('阶段一：需求收集', level=1)
 
     doc.add_heading('用户原始输入', level=2)
-    doc.add_paragraph('在当前 HarmonyOS 应用中实现一个与大语言模型（LLM）交互的聊天功能。用户可以通过聊天界面与大模型进行对话，发送问题并获得智能回复。').style = 'Quote'
+    doc.add_paragraph('在当前 HarmonyOS 应用中实现一个与大语言模型（LLM）交互的聊天功能。用户可以通过聊天界面与大模型进行对话，发送问题并获得智能回复。').style = 'Intense Quote'
 
     doc.add_heading('AI 理解与分析', level=2)
     doc.add_paragraph('AI 将模糊的需求分解为可实施的功能点：')
@@ -107,6 +107,20 @@ def create_report():
 
     # 阶段二：需求澄清
     doc.add_heading('阶段二：需求澄清', level=1)
+
+    doc.add_heading('用户提供的设计规范', level=2)
+    p = doc.add_paragraph()
+    p.add_run('用户输入: ').bold = True
+    p.add_run('设计必须遵循华为官方规范').italic = True
+
+    doc.add_paragraph('• 设计最佳实践: https://developer.huawei.com/consumer/cn/doc/design-guides/practices-overview-0000001746498066')
+    doc.add_paragraph('• UX体验标准: https://developer.huawei.com/consumer/cn/doc/design-guides/ux-guidelines-general-0000001760708152')
+
+    doc.add_heading('AI 理解与执行', level=3)
+    doc.add_paragraph('1. 访问并分析华为官方设计规范文档')
+    doc.add_paragraph('2. 提取关键 UX 合规要求（点击热区、色彩对比度、字体大小、动效时长等）')
+    doc.add_paragraph('3. 将规范要求转化为可检查的合规项')
+    doc.add_paragraph('4. 更新 spec.md，添加"设计规范"和"UX 合规要求"章节')
 
     doc.add_heading('AI 主动提出的澄清问题', level=2)
     doc.add_paragraph('AI 发现需求中存在多个模糊点，主动向用户提问：')
@@ -201,7 +215,7 @@ entry/src/main/ets/
     doc.add_heading('阶段五：代码实现', level=1)
 
     doc.add_heading('用户指令', level=2)
-    doc.add_paragraph('继续执行所有任务，不要中途退出').style = 'Quote'
+    doc.add_paragraph('继续执行所有任务，不要中途退出').style = 'Intense Quote'
 
     doc.add_heading('AI 执行过程', level=2)
 
@@ -409,7 +423,8 @@ entry/src/main/ets/
     doc.add_heading('阶段九：知识沉淀', level=1)
 
     doc.add_heading('用户指令', level=2)
-    doc.add_paragraph('总结chat应用开发-编译-测试过程中遇到的问题和经验，形成注意事项和skills').style = 'Quote'
+    p = doc.add_paragraph()
+    p.add_run('总结chat应用开发-编译-测试过程中遇到的问题和经验，形成注意事项和skills').italic = True
 
     doc.add_heading('AI 生成的 Skills 文档', level=2)
     doc.add_paragraph('• harmonyos-arkts-development.md - ArkTS 开发注意事项')

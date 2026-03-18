@@ -73,6 +73,21 @@ AI 将模糊的需求分解为可实施的功能点：
 
 ## 阶段二：需求澄清
 
+### 用户提供的设计规范
+
+**用户输入**:
+```
+设计必须遵循华为官方规范：
+- 设计最佳实践: https://developer.huawei.com/consumer/cn/doc/design-guides/practices-overview-0000001746498066
+- UX体验标准: https://developer.huawei.com/consumer/cn/doc/design-guides/ux-guidelines-general-0000001760708152
+```
+
+**AI 理解与执行**:
+1. 访问并分析华为官方设计规范文档
+2. 提取关键 UX 合规要求（点击热区、色彩对比度、字体大小、动效时长等）
+3. 将规范要求转化为可检查的合规项
+4. 更新 spec.md，添加"设计规范（必须遵循）"和"UX 合规要求"章节
+
 ### AI 主动提出的澄清问题
 
 AI 发现需求中存在多个模糊点，主动向用户提问：
@@ -87,7 +102,7 @@ AI 发现需求中存在多个模糊点，主动向用户提问：
 
 ### AI 更新规范文档
 
-基于用户的澄清回答，AI 更新了 spec.md：
+基于用户的澄清回答和设计规范，AI 更新了 spec.md：
 
 ```markdown
 ## 澄清
