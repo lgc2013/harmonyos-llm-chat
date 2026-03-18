@@ -1,0 +1,30 @@
+---
+description: 根据可用的设计工件，将现有任务转换为可执行的、依赖排序的 GitHub issues
+tools: ['github/github-mcp-server/issue_write']
+---
+
+## 用户输入
+
+```text
+$ARGUMENTS
+```
+
+在继续之前，**必须**考虑用户输入（如果不为空）。
+
+## 大纲
+
+1. 从仓库根目录运行 `.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks` 并解析 FEATURE_DIR 和 AVAILABLE_DOCS 列表。所有路径必须是绝对路径。对于参数中的单引号，如 "I'm Groot"，请使用转义语法：例如 'I'\''m Groot'（如果可以的话也可以用双引号："I'm Groot"）。
+2. 从执行的脚本中，提取 **tasks** 的路径。
+3. 通过运行以下命令获取 Git 远程：
+
+```bash
+git config --get remote.origin.url
+```
+
+> [!CAUTION]
+> 仅当远程是 GITHUB URL 时才继续下一步
+
+4. 对于列表中的每个任务，使用 GitHub MCP 服务器在代表 Git 远程的仓库中创建新问题。
+
+> [!CAUTION]
+> 绝不创建与远程 URL 不匹配的仓库中的问题
