@@ -1,0 +1,10 @@
+{
+  "name": "myapplication",
+  "version": "1.0.0",
+  "description": "HarmonyOS Application",
+  "dependencies": {},
+  "devDependencies": {
+    "@ohos/hvigor": "^4.0.2",
+    "@ohos/hvigor-ohos-plugin": "^4.0.2"
+  }
+}

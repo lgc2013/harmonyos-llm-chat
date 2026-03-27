@@ -83,6 +83,34 @@
     {
       "name": "link",
       "value": "#007DFF"
+    },
+    {
+      "name": "chip_bg",
+      "value": "#E6F0FF"
+    },
+    {
+      "name": "divider",
+      "value": "#E5E5E5"
+    },
+    {
+      "name": "shadow_color",
+      "value": "#1A000000"
+    },
+    {
+      "name": "primary_icon",
+      "value": "#333333"
+    },
+    {
+      "name": "secondary_icon",
+      "value": "#999999"
+    },
+    {
+      "name": "button_background",
+      "value": "#F5F5F5"
+    },
+    {
+      "name": "slider_track",
+      "value": "#E0E0E0"
     }
   ]
 }

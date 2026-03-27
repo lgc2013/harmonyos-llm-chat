@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\HUAWEI\\.ohos\\config\\default_MyApplication_IgALnxIlkrHeuBKeGLClC-sSl4lHs9cwxKsLcf-AzAM=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BB35895DAC3A0845D2B83E2AF81A67368E231F8011167D998793A97626CBB6C9146797BF44C7D9E",
+          "profile": "C:\\Users\\HUAWEI\\.ohos\\config\\default_MyApplication_IgALnxIlkrHeuBKeGLClC-sSl4lHs9cwxKsLcf-AzAM=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\HUAWEI\\.ohos\\config\\default_MyApplication_IgALnxIlkrHeuBKeGLClC-sSl4lHs9cwxKsLcf-AzAM=.p12",
+          "storePassword": "0000001B13DFE7147C4DC272B38F7D387149522C5CCE417183EAA7BC859C7BEFCF4866C7658B477F9BF6E6"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
@@ -18,7 +32,7 @@
     ],
     "buildModeSet": [
       {
-        "name": "debug",
+        "name": "debug"
       },
       {
         "name": "release"

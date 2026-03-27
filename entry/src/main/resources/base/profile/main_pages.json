@@ -1,5 +1,12 @@
 {
   "src": [
-    "pages/Index"
+    "pages/Index",
+    "musicplayer/pages/IndexPage",
+    "musicplayer/pages/LocalMusicPage",
+    "musicplayer/pages/PlayerPage",
+    "musicplayer/pages/RadioListPage",
+    "musicplayer/pages/PlaylistPage",
+    "musicplayer/pages/PlaylistDetailPage",
+    "musicplayer/pages/SearchPage"
   ]
 }

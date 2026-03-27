@@ -1,16 +1,10 @@
 # HarmonyOS 项目编译 Skill
 
-编译 HarmonyOS 项目，包括依赖安装和构建。
+编译 HarmonyOS 项目，生成 HAP 包。
 
 ## 执行步骤
 
-### 1. 安装依赖
-
-```bash
-"D:\software\Dev-eco\DevEco Studio\tools\ohpm\bin\ohpm.bat" install --all --registry https://ohpm.openharmony.cn/ohpm/ --strict_ssl true
-```
-
-### 2. 执行编译
+### 执行编译
 
 ```bash
 "D:\software\Dev-eco\DevEco Studio\tools\node\node.exe" "D:\software\Dev-eco\DevEco Studio\tools\hvigor\bin\hvigorw.js" --sync -p product=default --analyze=normal --parallel --incremental --daemon
@@ -26,4 +20,5 @@
 
 - 确保DevEco Studio路径正确
 - 首次编译可能需要较长时间
-- 如遇依赖问题，可尝试清理后重新编译
+- `@ohos/hvigor` 等依赖由 DevEco Studio 自带，无需通过 ohpm 安装
+- 如遇依赖问题，可尝试清理 `.hvigor/cache` 目录后重新编译

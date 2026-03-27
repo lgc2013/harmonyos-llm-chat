@@ -1,8 +1,13 @@
 claude --dangerously-skip-permissions
 
+在当前 HarmonyOS 应用中实现一个与大语言模型（LLM）交互的聊天功能。用户可以通过聊天界面与大模型进行对话，发送问题并获得智能回复。该功能将采用测试驱动开发（TDD）模式进行开发，确保代码质量和功能正确性。
 要求：
-【设计参考最佳实践】：[https://developer.huawei.com/consumer/cn/doc/design-guides/practices-overview-0000001746498066]
+
+
+【应用设计参考最佳实践】：[https://developer.huawei.com/consumer/cn/doc/design-guides/practices-overview-0000001746498066]
 【遵守应用UX体验标准】:[https://developer.huawei.com/consumer/cn/doc/design-guides/ux-guidelines-general-0000001760708152]
+
+【设计与实现最佳实践】: https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-best-practices-overview
 
 编译：
 1.首先Ohpm install:
@@ -12,5 +17,63 @@ claude --dangerously-skip-permissions
 
 模拟器连接和运行命令：
 "D:\software\Dev-eco\DevEco Studio\tools\node\node.exe" "D:\software\Dev-eco\DevEco Studio\tools\hvigor\bin\hvigorw.js" --mode module -p module=entry@default -p product=default -p requiredDeviceType=phone assembleHap --analyze=normal --parallel --incremental --daemon	
+
+单元测试使用 hypium 框架，需要通过 IDE 运行。我将进行 UI 自动化测试，通过 hdc
+  模拟用户操作。
+
+
+单元测试：
+"D:\software\Dev-eco\DevEco Studio\tools\node\node.exe" "D:\software\Dev-eco\DevEco Studio\tools\hvigor\bin\hvigorw.js" --mode module -p module=entry@default -p unit.test.replace.page=../../../.test/testability/pages/Index -p product=default -p pageType=page -p isLocalTest=true -p unitTestMode=true -p buildRoot=.test UnitTestBuild --analyze=normal --parallel --incremental --daemon
+
+
+待讨论：
+
+1、从功能的角度，ArkTS 开发可以分哪些类别，可以去逐个穿刺，在这些场景Agent生成代码的能力边界，比如当前UI/操作类的功能，agent已经非常擅长。
+2、讨论未来穿刺的场景：1）当前实际开发过程中效率低的场景；2）结合当前Agent能力，可以快速取得效果的场景（UI类的应用、功能先穿刺？）
+3、当前ArkTS APP有没有什么验收标准，测试用例的规划上有没有固定方法或者用例、维度；
+4、外部开发者如何使用故障模式库和dfx规范的，(内存、性能在具体项目的要求是怎么生成的)；
+5、当前的测试用例是怎么开发的
+
+会议链接：
+https://app.huawei.com/wmeeting/join/99676539/LqOfimaldhOzIEsaV23ZH2jzD6jaoKTmM
+
+建议：特性修复的总结，
+
+
+TBD:
+1、鸿蒙是否有意图做AI辅助开发的意图；
+2、能否实现的复杂应用，解决AI coding过程中的卡点；
+3、后训练能力增强；
+4、DFX；
+5、AI coding需要构建哪些环境。
+
+
+ITS ArkTS 的语法区分；
+踩坑指南；
+skills的数量；
+spec;
+harness engineering(架构约束下的新功能合入)；
+
+场景：
+1、第一把生成的不准确，过期的API；
+2、语法不准确，编译时间长，修改代码少；以比较少的代价解决编译问题，language server轻量级检查；
+3、功能不完备。
+4、UX工具比较慢，深度深就会比较差；快速识别页面交互和显示故障。
+5、怎么评价spec 好坏。
+
+spec 程帅，少坤；
+todo：
+1、找一个复杂场景打通；
+2、找一个场景做RL，编译报错的数据，回流数据的数据。 云红，
+
+
+
+
+
+
+
+
+
+
 
 

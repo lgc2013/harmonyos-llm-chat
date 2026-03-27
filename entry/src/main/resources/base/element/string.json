@@ -2,15 +2,35 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "音乐播放器模块"
     },
     {
       "name": "EntryAbility_desc",
-      "value": "description"
+      "value": "音乐播放器应用入口"
     },
     {
       "name": "EntryAbility_label",
-      "value": "label"
+      "value": "音乐播放器"
+    },
+    {
+      "name": "permission_internet_reason",
+      "value": "用于播放网络音乐流和获取电台数据"
+    },
+    {
+      "name": "permission_network_reason",
+      "value": "用于检测网络状态以优化播放体验"
+    },
+    {
+      "name": "permission_read_media_reason",
+      "value": "用于读取本地音乐文件"
+    },
+    {
+      "name": "permission_write_media_reason",
+      "value": "用于保存播放列表和下载的音乐"
+    },
+    {
+      "name": "permission_background_reason",
+      "value": "用于在后台继续播放音乐"
     }
   ]
 }
